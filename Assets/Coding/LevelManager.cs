@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    int level1sKunci;
+    public int level1sKunci;
     public Button[] tombol;
     // Start is called before the first frame update
 
@@ -36,7 +36,13 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            for (int i = 0; i < tombol.Length; i++)
+            {
+                tombol[i].interactable = true;
+            }
+        }
     }
     public void Quit()
     {
