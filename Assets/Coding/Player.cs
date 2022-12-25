@@ -18,12 +18,11 @@ public class Player : MonoBehaviour
     string HISCORE = "HISCORE";
     string COIN = "COIN";
     public GameObject layarKalahUI;
-    
-  
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    
+        Application.targetFrameRate = 60;
     }
 
     private void Start()

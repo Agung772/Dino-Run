@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class Back : MonoBehaviour
 {
     public Button back;
-
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     public void BackMainMenu(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);

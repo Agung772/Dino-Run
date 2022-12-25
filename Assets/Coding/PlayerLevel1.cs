@@ -22,8 +22,9 @@ public class PlayerLevel1 : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        Application.targetFrameRate = 60;
     }
+
     private void Start()
     {
         hiScoreLevel1 = PlayerPrefs.GetInt(HISCORELevel1);

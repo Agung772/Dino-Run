@@ -9,6 +9,11 @@ public class LevelManager : MonoBehaviour
     int level1sKunci;
     public Button[] tombol;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
     void Start()
     {
 
