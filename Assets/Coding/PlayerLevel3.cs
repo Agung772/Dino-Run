@@ -24,6 +24,8 @@ public class PlayerLevel3 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Application.targetFrameRate = 60;
+
+        Time.timeScale = 1;
     }
 
     private void Start()
@@ -50,6 +52,10 @@ public class PlayerLevel3 : MonoBehaviour
         {
             sensor = batasLoncat;
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) SceneManager.LoadScene("Level 1");
+        if (Input.GetKeyDown(KeyCode.Alpha2)) SceneManager.LoadScene("Level 2");
+        if (Input.GetKeyDown(KeyCode.Alpha3)) SceneManager.LoadScene("Level 3");
     }
     void AddKoin()
     {
